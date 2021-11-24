@@ -1,0 +1,11 @@
+{
+    "mongoServer": "mongodb+srv://root:1234lima6@ilhamendianto.xkpvm.mongodb.net/test",
+    "database": "BiFast",
+    "systemLogCollection": "mpcBifastSystemLogger",
+    "settlementLogCollection": "mpcSettlementLogs",
+    "creditTransferLogCollection": "mpcBalanceLogs",
+    "kafkaAddress":"kafka.visiondg.xyz:9092",
+    "systemLogTopic": "mpc.json.bifast.systemLogger",
+    "settlementLogTopic": "mpc.SettlementLogs",
+    "creditTransferLogTopic": "mpc.BalanceLogs"
+}
