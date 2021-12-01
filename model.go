@@ -32,29 +32,43 @@ type SystemLoggerStruct struct {
 }
 
 type SettlementLogStruct struct {
-	RequestId              string `json:"requestId" bson:"requestId"`
-	Direction              string `json:"direction" bson:"direction"`
-	SettlementType         string `json:"settlementType" bson:"settlementType"`
-	FromId                 string `json:"fromId" bson:"fromId"`
-	ToId                   string `json:"toId" bson:"toId"`
-	BusinessMessageId      string `json:"businessMessageId" bson:"businessMessageId"`
-	MessageDefinitionId    string `json:"messageDefinitionId" bson:"messageDefinitionId"`
-	CreationDate           string `json:"creationDate" bson:"creationDate"`
-	MessageId              string `json:"messageId" bson:"messageId"`
-	CreationDateTime       string `json:"creationDateTime" bson:"creationDateTime"`
-	OriginalEndToEndId     string `json:"originalEndToEndId" bson:"originalEndToEndId"`
-	OriginalTransactionId  string `json:"originalTransactionId" bson:"originalTransactionId"`
-	TransactionStatus      string `json:"transactionStatus" bson:"transactionStatus"`
-	ReasonCode             string `json:"reasonCode" bson:"reasonCode"`
-	AdditionalInfo         string `json:"additionalInfo" bson:"additionalInfo"`
-	CreditorName           string `json:"creditorName" bson:"creditorName"`
-	CreditorAccountId      string `json:"creditorAccountId" bson:"creditorAccountId"`
-	CreditorAccountType    string `json:"creditorAccountType" bson:"creditorAccountType"`
-	CreditorType           string `json:"creditorType" bson:"creditorType"`
-	CreditorResidentStatus string `json:"creditorResidentStatus" bson:"creditorResidentStatus"`
-	CreditorTownName       string `json:"creditorTownName" bson:"creditorTownName"`
-	DebitorName            string `json:"debitorName" bson:"debitorName"`
-	DebitorAccountId       string `json:"debitorAccountId" bson:"debitorAccountId"`
+	RequestId                string `json:"requestId" bson:"requestId"`
+	Direction                string `json:"direction" bson:"direction"`
+	SettlementType           string `json:"settlementType" bson:"settlementType"`
+	FromId                   string `json:"fromId" bson:"fromId"`
+	ToId                     string `json:"toId" bson:"toId"`
+	BusinessMessageId        string `json:"businessMessageId" bson:"businessMessageId"`
+	MessageDefinitionId      string `json:"messageDefinitionId" bson:"messageDefinitionId"`
+	BusinessServiceId        string `json:"businessServiceId,omitempty" bson:"businessServiceId,omitempty"`
+	CreationDate             string `json:"creationDate" bson:"creationDate"`
+	CopyDuplicate            string `json:"copyDuplicate,omitempty" bson:"copyDuplicate,omitempty"`
+	PossibleDuplicate        string `json:"possibleDuplicate,omitempty" bson:"possibleDuplicate,omitempty"`
+	MessageId                string `json:"messageId" bson:"messageId"`
+	CreationDateTime         string `json:"creationDateTime" bson:"creationDateTime"`
+	OriginalMessageId        string `json:"originalMessageId,omitempty" bson:"originalMessageId,omitempty"`
+	OriginalMessageNameId    string `json:"originalMessageNameId,omitempty" bson:"originalMessageNameId,omitempty"`
+	OriginalCreationDateTime string `json:"originalCreationDateTime,omitempty" bson:"originalCreationDateTime,omitempty"`
+	OriginalEndToEndId       string `json:"originalEndToEndId" bson:"originalEndToEndId"`
+	OriginalTransactionId    string `json:"originalTransactionId" bson:"originalTransactionId"`
+	TransactionStatus        string `json:"transactionStatus" bson:"transactionStatus"`
+	ReasonCode               string `json:"reasonCode" bson:"reasonCode"`
+	AdditionalInfo           string `json:"additionalInfo" bson:"additionalInfo"`
+	InterBankSettlementDate  string ` json:"interBankSettlementDate,omitempty" bson:"interBankSettlementDate,omitempty"`
+	DebtorName               string `json:"debtorName,omitempty" bson:"debtorName,omitempty"`
+	DebtorAccountId          string `json:"debtorAccountId,omitempty" bson:"debtorAccountId,omitempty"`
+	DebtorAccountType        string `json:"debtorAccountType,omitempty" bson:"debtorAccountType,omitempty"`
+	OriginalDebtorFiId       string `json:"originalDebtorFiId,omitempty" bson:"originalDebtorFiId,omitempty"`
+	CreditorFiId             string `json:"creditorFiId,omitempty" bson:"creditorFiId,omitempty"`
+	CreditorName             string `json:"creditorName" bson:"creditorName"`
+	CreditorAccountId        string `json:"creditorAccountId" bson:"creditorAccountId"`
+	CreditorAccountType      string `json:"creditorAccountType" bson:"creditorAccountType"`
+	DebtorType               string `json:"debtorType,omitempty" bson:"debtorType,omitempty"`
+	DebtorNationalId         string `json:"debtorNationalId,omitempty" bson:"debtorNationalId,omitempty"`
+	DebtorResidentStatus     string `json:"debtorResidentStatus,omitempty" bson:"debtorResidentStatus,omitempty"`
+	DebtorTownName           string `json:"debtorTownName,omitempty" bson:"debtorTownName,omitempty"`
+	CreditorType             string `json:"creditorType" bson:"creditorType"`
+	CreditorResidentStatus   string `json:"creditorResidentStatus" bson:"creditorResidentStatus"`
+	CreditorTownName         string `json:"creditorTownName" bson:"creditorTownName"`
 }
 
 type CreditTransferLogStruct struct {
