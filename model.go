@@ -40,11 +40,12 @@ type SettlementLogStruct struct {
 	BusinessMessageId        string `json:"businessMessageId" bson:"businessMessageId"`
 	MessageDefinitionId      string `json:"messageDefinitionId" bson:"messageDefinitionId"`
 	BusinessServiceId        string `json:"businessServiceId,omitempty" bson:"businessServiceId,omitempty"`
+	HeaderDateTime           string `json:"headerDateTime" bson:"headerDateTime"`
 	CreationDate             string `json:"creationDate" bson:"creationDate"`
 	CopyDuplicate            string `json:"copyDuplicate,omitempty" bson:"copyDuplicate,omitempty"`
 	PossibleDuplicate        string `json:"possibleDuplicate,omitempty" bson:"possibleDuplicate,omitempty"`
 	MessageId                string `json:"messageId" bson:"messageId"`
-	CreationDateTime         string `json:"creationDateTime" bson:"creationDateTime"`
+	DocumentDateTime         string `json:"documentDateTime" bson:"documentDateTime"`
 	OriginalMessageId        string `json:"originalMessageId,omitempty" bson:"originalMessageId,omitempty"`
 	OriginalMessageNameId    string `json:"originalMessageNameId,omitempty" bson:"originalMessageNameId,omitempty"`
 	OriginalCreationDateTime string `json:"originalCreationDateTime,omitempty" bson:"originalCreationDateTime,omitempty"`
@@ -81,11 +82,12 @@ type CreditTransferLogStruct struct {
 	BusinessMessageId       string `json:"businessMessageId" bson:"businessMessageId"`
 	MessageDefinitionId     string `json:"messageDefinitionId" bson:"messageDefinitionId"`
 	BusinessServiceId       string `json:"businessServiceId" bson:"businessServiceId"`
+	HeaderDateTime          string `json:"headerDateTime" bson:"headerDateTime"`
 	CreationDate            string `json:"creationDate" bson:"creationDate"`
 	CopyDuplicate           string `json:"copyDuplicate" bson:"copyDuplicate"`
 	PossibleDuplicate       string `json:"possibleDuplicate" bson:"possibleDuplicate"`
 	MessageId               string `json:"messageId" bson:"messageId"`
-	CreationDateTime        string `json:"creationDateTime" bson:"creationDateTime"`
+	DocumentDateTime        string `json:"documentDateTime" bson:"documentDateTime"`
 	OriginalMessageId       string `json:"originalMessageId" bson:"originalMessageId"`
 	OriginalMessageNameId   string `json:"originalMessageNameId" bson:"originalMessageNameId"`
 	OriginalEndToEndId      string `json:"originalEndToEndId" bson:"originalEndToEndId"`
